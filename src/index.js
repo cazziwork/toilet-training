@@ -7,6 +7,8 @@ const CancelAndStopIntentHandler = require('./intent/default/CancelAndStopIntent
 const SessionEndedRequestHandler = require('./intent/default/SessionEndedRequest');
 const ErrorHandler = require('./intent/default/Error');
 
+const StampIntentHandler = require('./intent/StampIntent');
+
 const HelloIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
@@ -31,6 +33,7 @@ exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
     HelloIntentHandler,
+    StampIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler

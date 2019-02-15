@@ -3,7 +3,7 @@ const LaunchRequestHandler = {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
   },
   handle(handlerInput) {
-    let speechText = '起動メッセージ';
+    let speechText = 'こんにちは';
 
     return handlerInput.responseBuilder
       .speak(speechText)
