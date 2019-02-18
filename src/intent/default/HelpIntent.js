@@ -1,3 +1,5 @@
+const Message = require('../../message');
+
 const HelpIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
@@ -5,8 +7,8 @@ const HelpIntentHandler = {
   },
   handle(handlerInput) {
     return handlerInput.responseBuilder
-      .speak('ヘルプメッセージ')
-      .reprompt('ヘルプメッセージ')
+      .speak(Message.HELP_DETAIL)
+      .reprompt(Message.HELP_DETAIL)
       .getResponse();
   },
 };

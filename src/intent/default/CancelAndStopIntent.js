@@ -12,7 +12,7 @@ const CancelAndStopIntentHandler = {
       '<say-as interpret-as="interjection">またね</say-as>',
       '<say-as interpret-as="interjection">んじゃ</say-as>',
     ];
-    const speechText = GOOD_BYE[Math.floor( Math.random() * 12 )];
+    const speechText = GOOD_BYE[Math.floor( Math.random() * 6 )];
 
     return handlerInput.responseBuilder
       .speak(speechText)

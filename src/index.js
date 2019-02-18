@@ -7,19 +7,8 @@ const CancelAndStopIntentHandler = require('./intent/default/CancelAndStopIntent
 const SessionEndedRequestHandler = require('./intent/default/SessionEndedRequest');
 const ErrorHandler = require('./intent/default/Error');
 
-const StampIntentHandler = require('./intent/StampIntent');
-
-const HelloIntentHandler = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'HelloIntent';
-  },
-  async handle(handlerInput) {
-    return handlerInput.responseBuilder
-      .speak('hello world')
-      .getResponse();
-  },
-};
+const RecordIntentHandler = require('./intent/RecordIntent');
+const TellMeIntentHandler = require('./intent/TellMeIntent');
 
 const config = {
   tableName: 'ToiletTrainingTable',
@@ -32,8 +21,8 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
-    HelloIntentHandler,
-    StampIntentHandler,
+    RecordIntentHandler,
+    TellMeIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler

@@ -6,7 +6,8 @@ const ErrorHandler = {
     console.log(`Error handled: ${error.message}`);
 
     return handlerInput.responseBuilder
-      .speak('<say-as interpret-as="interjection">あちゃ</say-as>')
+      .speak('<say-as interpret-as="interjection">ごめんなさい</say-as>、、ちょっとわかりませんでした。')
+      .withShouldEndSession(true)
       .getResponse();
   },
 };
