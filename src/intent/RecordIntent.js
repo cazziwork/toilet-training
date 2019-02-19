@@ -26,7 +26,7 @@ const RecordIntentHandler = {
     if ('成功' === result) {
       await dynamo.pushData({ 'result': true, 'time': (new Date()).toISOString() });
       return handlerInput.responseBuilder
-        .speak(this.createSpecialMessage(await dynamo.getData()))
+        .speak(Message.RECORD_GOOD)
         .withShouldEndSession(true)
         .getResponse();
     }
@@ -36,22 +36,6 @@ const RecordIntentHandler = {
       .speak(Message.RECORD_BAD)
       .withShouldEndSession(true)
       .getResponse();
-  },
-  createSpecialMessage(data) {
-    const count = _.filter(data, { 'result': true });
-    switch(count) {
-      case 3:
-        // TODO 効果音付きで称賛する
-      case 5:
-
-      case 10:
-
-      case 50:
-
-      default:
-        return Message.RECORD_GOOD;
-    }
-
   }
 };
 

@@ -15,7 +15,7 @@ const TellMeIntentHandler = {
       let intentObj = handlerInput.requestEnvelope.request.intent;
       intentObj.confirmationStatus = "IN_PROGRESS";
       return handlerInput.responseBuilder
-        .speak(Message.RECORD_CONFIRM + Message.REPEAT)
+        .speak(Message.TELLME_CONFIRM + Message.REPEAT)
         .reprompt(Message.REPEAT)
         .addElicitSlotDirective('result', intentObj)
         .getResponse();
@@ -46,11 +46,26 @@ const TellMeIntentHandler = {
       .getResponse();
   },
   createMessage(data, result) {
-    const prefix = '記録では' + (_.filter(data, { 'result': result })).length + '回';
+    let message = 'これまでの';
+    const count = (_.filter(data, { 'result': result })).length;
+
     if (result) {
-      return prefix + '成功しているよ';
+      message += '成功回数は<break time="0.1s"/>' + count + '回！';
+      const LIST = [
+        '<say-as interpret-as="interjection">イェイ</say-as>',
+        '<say-as interpret-as="interjection">わおぅ</say-as>',
+        '<say-as interpret-as="interjection">やった</say-as>',
+        '<say-as interpret-as="interjection">わ〜い</say-as>'
+      ];
+      return message + LIST[Math.floor(Math.random() * (LIST.length))];
     } else {
-      return prefix + '失敗してるね';
+      message += '失敗回数は<break time="0.1s"/>' + count + '回！';
+      const LIST = [
+        '<say-as interpret-as="interjection">およよ</say-as>',
+        '<say-as interpret-as="interjection">しくしく</say-as>',
+        '<say-as interpret-as="interjection">とほほ</say-as>', 
+      ];
+      return message + LIST[Math.floor(Math.random() * (LIST.length))];
     }
   }
 };
