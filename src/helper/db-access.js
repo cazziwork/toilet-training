@@ -8,6 +8,12 @@ module.exports = class DAO {
     let persistentAttributes = await this.attributesManager.getPersistentAttributes();
     return persistentAttributes.data;
   }
+  async clearData() {
+    let persistentAttributes = await this.attributesManager.getPersistentAttributes();
+    persistentAttributes.data = null;
+    this.attributesManager.setPersistentAttributes(persistentAttributes);
+    await this.attributesManager.savePersistentAttributes();
+  }
   async pushData(record) {
     let persistentAttributes = await this.attributesManager.getPersistentAttributes();
     if (_.isNil(persistentAttributes.data)) {

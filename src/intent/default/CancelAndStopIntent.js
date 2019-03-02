@@ -1,3 +1,5 @@
+const Message = require('../../message');
+
 const CancelAndStopIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
@@ -5,14 +7,7 @@ const CancelAndStopIntentHandler = {
         || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StopIntent');
   },
   handle(handlerInput) {
-    const GOOD_BYE = [
-      '<say-as interpret-as="interjection">じゃね</say-as>',
-      '<say-as interpret-as="interjection">バイバイ</say-as>',
-      '<say-as interpret-as="interjection">また明日</say-as>',
-      '<say-as interpret-as="interjection">またね</say-as>',
-      '<say-as interpret-as="interjection">んじゃ</say-as>',
-    ];
-    const speechText = GOOD_BYE[Math.floor( Math.random() * GOOD_BYE.length )];
+    const speechText = Message.sayGoodBye();
 
     return handlerInput.responseBuilder
       .speak(speechText)

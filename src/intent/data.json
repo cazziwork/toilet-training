@@ -1,0 +1,376 @@
+{
+  "listTemplate2Metadata": {
+    "type": "object",
+    "objectId": "lt1Metadata",
+    "backgroundImage": {
+      "contentDescription": null,
+      "smallSourceUrl": null,
+      "largeSourceUrl": null,
+      "sources": [
+        {
+          "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/img/bg.png",
+          "size": "small",
+          "widthPixels": 0,
+          "heightPixels": 0
+        },
+        {
+          "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/img/bg.png",
+          "size": "large",
+          "widthPixels": 0,
+          "heightPixels": 0
+        }
+      ]
+    },
+    "title": "ごほうびシール"
+  },
+  "listTemplate2ListData": {
+    "type": "list",
+    "listId": "lt2Sample",
+    "totalNumberOfItems": 10,
+    "hintText": "終了する場合は アレクサ、ストップ",
+    "listPage": {
+      "listItems": [
+        {
+          "listItemIdentifier": "おたまじゃくし",
+          "ordinalNumber": 1,
+          "textContent": {
+            "primaryText": {
+              "type": "PlainText",
+              "text": "おたまじゃくし"
+            },
+            "secondaryText": {
+              "type": "PlainText",
+              "text": "10回目の成功ごほうび"
+            }
+          },
+          "image": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/10.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+              },
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/10.png",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+              }
+            ]
+          },
+          "token": "おたまじゃくし"
+        },
+        {
+          "listItemIdentifier": "ミツバチ",
+          "ordinalNumber": 2,
+          "textContent": {
+            "primaryText": {
+              "type": "PlainText",
+              "text": "ミツバチ"
+            },
+            "secondaryText": {
+              "type": "RichText",
+              "text": "20回目の成功ごほうび"
+            }
+          },
+          "image": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/20.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+              },
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/20.png",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+              }
+            ]
+          },
+          "token": "ミツバチ"
+        },
+        {
+          "listItemIdentifier": "金魚",
+          "ordinalNumber": 3,
+          "textContent": {
+            "primaryText": {
+              "type": "PlainText",
+              "text": "金魚"
+            },
+            "secondaryText": {
+              "type": "RichText",
+              "text": "30回目の成功ごほうび"
+            }
+          },
+          "image": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/30.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+              },
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/30.png",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+              }
+            ]
+          },
+          "token": "金魚"
+        },
+        {
+          "listItemIdentifier": "クマノミ",
+          "ordinalNumber": 1,
+          "textContent": {
+            "primaryText": {
+              "type": "PlainText",
+              "text": "クマノミ"
+            },
+            "secondaryText": {
+              "type": "PlainText",
+              "text": "40回目の成功ごほうび"
+            }
+          },
+          "image": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/40.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+              },
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/40.png",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+              }
+            ]
+          },
+          "token": "クマノミ"
+        },
+        {
+          "listItemIdentifier": "クリオネ",
+          "ordinalNumber": 2,
+          "textContent": {
+            "primaryText": {
+              "type": "PlainText",
+              "text": "クリオネ"
+            },
+            "secondaryText": {
+              "type": "RichText",
+              "text": "50回目の成功ごほうび"
+            }
+          },
+          "image": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/50.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+              },
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/50.png",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+              }
+            ]
+          },
+          "token": "クリオネ"
+        },
+        {
+          "listItemIdentifier": "モモンガ",
+          "ordinalNumber": 3,
+          "textContent": {
+            "primaryText": {
+              "type": "PlainText",
+              "text": "モモンガ"
+            },
+            "secondaryText": {
+              "type": "RichText",
+              "text": "60回目の成功ごほうび"
+            }
+          },
+          "image": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/60.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+              },
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/60.png",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+              }
+            ]
+          },
+          "token": "モモンガ"
+        },
+        {
+          "listItemIdentifier": "クジラ",
+          "ordinalNumber": 3,
+          "textContent": {
+            "primaryText": {
+              "type": "PlainText",
+              "text": "クジラ"
+            },
+            "secondaryText": {
+              "type": "RichText",
+              "text": "70回目の成功ごほうび"
+            }
+          },
+          "image": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/70.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+              },
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/70.png",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+              }
+            ]
+          },
+          "token": "クジラ"
+        },
+        {
+          "listItemIdentifier": "ライオン",
+          "ordinalNumber": 3,
+          "textContent": {
+            "primaryText": {
+              "type": "PlainText",
+              "text": "ライオン"
+            },
+            "secondaryText": {
+              "type": "RichText",
+              "text": "80回目の成功ごほうび"
+            }
+          },
+          "image": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/80.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+              },
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/80.png",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+              }
+            ]
+          },
+          "token": "ライオン"
+        },
+        {
+          "listItemIdentifier": "クジャク",
+          "ordinalNumber": 3,
+          "textContent": {
+            "primaryText": {
+              "type": "PlainText",
+              "text": "クジャク"
+            },
+            "secondaryText": {
+              "type": "RichText",
+              "text": "90回目の成功ごほうび"
+            }
+          },
+          "image": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/90.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+              },
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/90.png",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+              }
+            ]
+          },
+          "token": "クジャク"
+        },
+        {
+          "listItemIdentifier": "ティラノサウルス",
+          "ordinalNumber": 3,
+          "textContent": {
+            "primaryText": {
+              "type": "PlainText",
+              "text": "ティラノサウルス"
+            },
+            "secondaryText": {
+              "type": "RichText",
+              "text": "100回目の成功ごほうび"
+            }
+          },
+          "image": {
+            "contentDescription": null,
+            "smallSourceUrl": null,
+            "largeSourceUrl": null,
+            "sources": [
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/100.png",
+                "size": "small",
+                "widthPixels": 0,
+                "heightPixels": 0
+              },
+              {
+                "url": "https://s3-ap-northeast-1.amazonaws.com/alexa-toilet-training/award/100.png",
+                "size": "large",
+                "widthPixels": 0,
+                "heightPixels": 0
+              }
+            ]
+          },
+          "token": "ティラノサウルス"
+        }
+      ]
+    }
+  }
+}

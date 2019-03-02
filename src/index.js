@@ -9,9 +9,11 @@ const ErrorHandler = require('./intent/default/Error');
 
 const RecordIntentHandler = require('./intent/RecordIntent');
 const TellMeIntentHandler = require('./intent/TellMeIntent');
+const DeleteIntentHandler = require('./intent/DeleteIntent');
+const ShowMeIntentHandler = require('./intent/ShowMeIntent');
 
 const config = {
-  tableName: 'ToiletTrainingTable',
+  tableName: process.env.TABLE_NAME,
   createTable: true
 };
 const DynamoDBAdapter = new Adapter.DynamoDbPersistenceAdapter(config);
@@ -23,6 +25,8 @@ exports.handler = skillBuilder
     LaunchRequestHandler,
     RecordIntentHandler,
     TellMeIntentHandler,
+    DeleteIntentHandler,
+    ShowMeIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler
