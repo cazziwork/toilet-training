@@ -8,12 +8,11 @@ steps:
   - npm install
   - npm run lint
 
-- name: prepare
-  image: python:2.7-alpine
+- name: zip
+  image: alpine
   commands:
   - apk update && apk add zip
-  - pip install -r requirements.txt -t .
-  - zip -r -9 target.zip src node_modules package.json
+  - zip -r target.zip src node_modules package.json
 
 - name: s3-publish
   image: plugins/s3
@@ -25,14 +24,14 @@ steps:
   source: target.zip
   target: /build
 
-- name: deploy-lambda
-  image: omerxx/drone-lambda-plugin
-  pull: true
-  access_key: ACCESS_KEY
-  secret_key: SECRET_KEY
-  function_name: alexa-toilet-training
-  s3_bucket: alexa-toilet-training
-  file_name: build/target.zip
+# - name: deploy-lambda
+#   image: omerxx/drone-lambda-plugin
+#   pull: true
+#   access_key: ACCESS_KEY
+#   secret_key: SECRET_KEY
+#   function_name: alexa-toilet-training
+#   s3_bucket: alexa-toilet-training
+#   file_name: build/target.zip
 
 trigger:
   branch:
