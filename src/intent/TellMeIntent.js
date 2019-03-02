@@ -1,5 +1,3 @@
-const util = require('util');
-
 const _ = require('lodash');
 const DAO = require('../helper/db-access');
 const result_util = require('../helper/result-util');
