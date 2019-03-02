@@ -46,7 +46,7 @@ steps:
       from_secret: AWS_ACCESS_KEY_ID
     AWS_SECRET_ACCESS_KEY:
       from_secret: AWS_SECRET_ACCESS_KEY
-    region:  ap-northeast-1
+    AWS_DEFAULT_REGION:  ap-northeast-1
   commands:
   - aws lambda update-function-code --function-name alexa-toilet-training --zip-file fileb://./target.zip
 
