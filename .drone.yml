@@ -36,6 +36,7 @@ steps:
     #   from_secret: ACCESS_KEY
     # secret_key:
     #   from_secret: SECRET_KEY
+    secrets: [ aws_access_key_id, aws_default_region, aws_secret_access_key ]
     source: target.zip
     target: /build
 
