@@ -18,6 +18,7 @@ steps:
   image: plugins/s3
   settings:
     bucket: alexa-toilet-training
+    region: ap-northeast-1
     access_key:
       from_secret: ACCESS_KEY
     secret_key:
