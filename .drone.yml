@@ -31,13 +31,21 @@ steps:
   image: plugins/s3
   settings:
     bucket: alexa-toilet-training
-    region: ap-northeast-1
-    access_key:
-      from_secret: ACCESS_KEY
-    secret_key:
-      from_secret: SECRET_KEY
+    # region: ap-northeast-1
+    # access_key:
+    #   from_secret: ACCESS_KEY
+    # secret_key:
+    #   from_secret: SECRET_KEY
     source: target.zip
     target: /build
+
+# - name: deploy-lambda
+#   image: omerxx/drone-lambda-plugin
+#   settings:
+#     pull: true
+#     function_name: alexa-toilet-training
+#     s3_bucket: alexa-toilet-training
+#     file_name: build/target.zip
 
 trigger:
   branch:
