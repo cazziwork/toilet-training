@@ -27,18 +27,6 @@ steps:
   - apk update && apk add zip
   - zip -r target.zip src node_modules package.json
 
-# - name: upload
-#   image: plugins/s3
-#   settings:
-#     bucket: alexa-toilet-training
-#     region: ap-northeast-1
-#     access_key:
-#       from_secret: AWS_ACCESS_KEY_ID
-#     secret_key:
-#       from_secret: AWS_SECRET_ACCESS_KEY
-#     source: target.zip
-#     target: /build
-
 - name: deploy-lambda
   image: lorentzca/aws
   environment:
@@ -55,3 +43,32 @@ trigger:
   - master
   event:
   - push
+
+---
+# tagが打たれたタイミングでLambda側もVUPする
+kind: pipeline
+name: tag
+steps:
+
+- name: zip
+  image: alpine
+  commands:
+  - apk update && apk add zip
+  - zip -r target.zip src node_modules package.json
+
+- name: deploy-lambda
+  image: lorentzca/aws
+  environment:
+    AWS_ACCESS_KEY_ID:
+      from_secret: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY:
+      from_secret: AWS_SECRET_ACCESS_KEY
+    AWS_DEFAULT_REGION:  ap-northeast-1
+  commands:
+  - aws lambda update-function-code --function-name alexa-toilet-training --zip-file fileb://./target.zip --publish
+
+trigger:
+  branch:
+  - master
+  event:
+  - tag
