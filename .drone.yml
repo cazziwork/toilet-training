@@ -1,0 +1,18 @@
+---
+kind: pipeline
+name: default
+steps:
+- name: node
+  image: node
+  commands:
+  - npm install
+  - npm run lint
+
+trigger:
+  branch:
+  - master
+  - develop
+  - feature/*
+  event:
+  - push
+  - pull_request
