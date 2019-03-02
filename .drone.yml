@@ -16,23 +16,23 @@ steps:
   - zip -r -9 target.zip src node_modules package.json
 
 - name: s3-publish
-    image: plugins/s3
-    acl: private
-    region: ap-northeast-1
-    bucket: alexa-toilet-training
-    access_key: ACCESS_KEY
-    secret_key: SECRET_KEY
-    source: target.zip
-    target: /build
+  image: plugins/s3
+  acl: private
+  region: ap-northeast-1
+  bucket: alexa-toilet-training
+  access_key: ACCESS_KEY
+  secret_key: SECRET_KEY
+  source: target.zip
+  target: /build
 
 - name: deploy-lambda
-    image: omerxx/drone-lambda-plugin
-    pull: true
-    access_key: ACCESS_KEY
-    secret_key: SECRET_KEY
-    function_name: alexa-toilet-training
-    s3_bucket: alexa-toilet-training
-    file_name: build/target.zip
+  image: omerxx/drone-lambda-plugin
+  pull: true
+  access_key: ACCESS_KEY
+  secret_key: SECRET_KEY
+  function_name: alexa-toilet-training
+  s3_bucket: alexa-toilet-training
+  file_name: build/target.zip
 
 trigger:
   branch:
