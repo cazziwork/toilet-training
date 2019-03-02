@@ -18,7 +18,7 @@ module.exports = {
   RECORD_BAD: '<say-as interpret-as="interjection">ドンマイ</say-as>、次こそ<say-as interpret-as="interjection">がんばってね</say-as>',
 
   // TellMe
-  TELLME_CONFIRM: 'どちらの記録が知りたいですか？成功の記録？それとも失敗の記録？',
+  TELLME_CONFIRM: 'どちらの記録が知りたいですか？成功？それとも失敗？',
   TELLME_NOT_FOUND: 'まだ記録がありません。',
 
   // DELETE
