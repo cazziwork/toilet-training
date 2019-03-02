@@ -68,7 +68,5 @@ steps:
   - aws lambda update-function-code --function-name alexa-toilet-training --zip-file fileb://./target.zip --publish
 
 trigger:
-  branch:
-  - master
   event:
   - tag
