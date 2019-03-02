@@ -2,11 +2,21 @@
 kind: pipeline
 name: default
 steps:
-- name: node
+- name: lint&zip
   image: node
   commands:
   - npm install
   - npm run lint
+  - zip -r target.zip src node_modules package.json
+
+- name: upload
+  image: plugins/s3
+  settings:
+    bucket: alexa-toilet-training
+    access_key: ACCESS_KEY
+    secret_key: SECRET_KEY
+    source: target.zip
+    target: /build
 
 trigger:
   branch:
@@ -15,4 +25,3 @@ trigger:
   - feature/*
   event:
   - push
-  - pull_request
