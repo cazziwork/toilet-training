@@ -50,7 +50,8 @@ steps:
       from_secret: AWS_SECRET_ACCESS_KEY
     AWS_DEFAULT_REGION:  ap-northeast-1
   commands:
-  - aws lambda update-function-code --function-name alexa-toilet-training --zip-file fileb://./target.zip --publish | aws lambda create-alias --function-name alexa-toilet-training --name ${DRONE_TAG} --function-version $?
+  - aws lambda update-function-code --function-name alexa-toilet-training --zip-file fileb://./target.zip 
+  - aws lambda publish-version --function-name alexa-toilet-training --description ${DRONE_TAG}
   when:
     event:
     - tag
