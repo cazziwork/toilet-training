@@ -1,5 +1,6 @@
 # toilet-training
 [![Build Status](https://cloud.drone.io/api/badges/mougenko/toilet-training/status.svg)](https://cloud.drone.io/mougenko/toilet-training)
+[![CircleCI](https://circleci.com/gh/mougenko/toilet-training.svg?style=svg)](https://circleci.com/gh/mougenko/toilet-training)
 
 ## テストシナリオ
 トイレトレーニングひらいて  ヘルプ  ストップして
