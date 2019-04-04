@@ -43,10 +43,10 @@ steps:
     --environment Variables={TABLE_NAME=SandboxTable,TZ=Asia/Tokyo}
     --layers ${DRONE_LAYER_ARN}
     --zip-file fileb://./target.zip
-  when:
-    instance:
-      include:
-      - localhost
+
+trigger:
+  target:
+  - none
 
 # ---
 # kind: pipeline
